@@ -1,5 +1,3 @@
-require "matrix"
-
 class MatrixController < ApplicationController
   include MatrixCalculator
 

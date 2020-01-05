@@ -13,5 +13,20 @@
  */
  @import "bootstrap";
 
-table>tr>td{width:60px;}
+/*table>tr>td{width:60px;}
 table>tr>td input{width:40px;}
+*/
+table>tbody>tr>td input{
+  text-align: center;
+  width: 70px;
+}
+table>tbody>tr>td{
+  border-bottom: 1px solid #F4F4F4;
+  border-left: 1px solid #E0E0E0;
+  border-radius: 5px;
+  border-right: 1px solid #E0E0E0;
+  border-top: 1px solid #C0C0C0;
+  box-shadow: 0px 1px 1px #C9C9C9 inset;
+}
+
+.top-buffer { margin-top:20px; }

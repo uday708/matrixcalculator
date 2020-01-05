@@ -37,16 +37,18 @@ function makeMatrix(number_of_rows, number_of_columns, matrix_type){
       columns += "<td><input name="+matrix_type+"["+i+"][] type='number'></td>";
     }
     resultHtml += '<tr>' + columns + '</tr>';
-  }  
+  }
   return resultHtml;
 }
 // 
 $(function(){
   $('#matrix-form').on("ajax:success", function(data, status, xhr) {
-    debugger
     $(this).next().empty();
     $.each(data.originalEvent.detail[0].matrix, function(index, obj) {
-      $("#matrix-form").next().append(obj + '<br>');
+      $("#matrix-form").next().append('(' + obj + ')<br>');
     });
+  });
+  $('#matrix-form').on("ajax:error", function(data, status, xhr) {
+    $(this).next().html(data.originalEvent.detail[0]);
   });
 });

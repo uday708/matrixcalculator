@@ -1,13 +1,25 @@
+<div class="container">
 <%= form_tag "/matrix", remote: true, id: "matrix-form" do %>
   <%= render 'matrix_dimension', matrix_for: "a"%>
   <%= render 'matrix_dimension', matrix_for: "b"%>
-  <div>
-    The first matrix:
-    A = <%= render 'matrix_table', matrix_for: "a"%>
-    The second matrix:
-    B = <%= render 'matrix_table', matrix_for: "b"%>
-  </div>
+    <div class="row top-buffer">
+      <div class="col-md-0">
+        <%= label_tag "matrix-a", "Matrix A =" %>
+      </div>
+      <div class="col-md-10">
+        <%= render 'matrix_table', matrix_for: "a"%>
+      </div>
+    </div>
 
-  A.B <%= submit_tag "=", id: "equal-button" %>
+    <div class="row top-buffer">
+      <div class="col-md-0">
+        <%= label_tag "matrix-b", "Matrix B =" %>
+      </div>
+      <div class="col-md-10">
+        <%= render 'matrix_table', matrix_for: "b"%>
+      </div>
+    </div>
+    A.B <%= submit_tag "=", id: "equal-button" %>
 <% end %>
-<div class="result"></div>
+  <div class="result"></div>
+</div>

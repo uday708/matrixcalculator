@@ -1,24 +1,16 @@
-# README
+# Matrix Calculation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```sh-session
+ git clone git@github.com:uday708/matrixcalculator.git
+```
 
-Things you may want to cover:
+Run server :-
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh-session
+ rails s -p 3001
+ ```
+* bundle install
+* rvm install 2.6.3
+* rvm use 2.6.3
+* Ruby version - '2.6.3'
+* Rails version - '5.2.3'

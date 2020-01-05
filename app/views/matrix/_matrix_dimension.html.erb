@@ -1,0 +1,5 @@
+<div class="row" data-matrix="<%= matrix_for %>">
+  <%= label_tag(matrix_for)%>
+  <%= select_tag(:"#{matrix_for}_row_matrix",options_for_select((1..10).to_a), class: "rowMatrix") %>
+  <%= select_tag(:"#{matrix_for}_column_matrix",options_for_select((1..10).to_a), class: "columnMatrix") %>
+</div>
